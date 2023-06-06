@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./styles.module.css";
+import { Toaster, toast } from "sonner";
 
 export default function Home() {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -17,21 +18,40 @@ export default function Home() {
     try {
       e.preventDefault();
       const cleanedNumber = cleanPhoneNumber(phoneNumber);
-      const response = await fetch(
-        `/api/twilio?phoneNumber=${encodeURIComponent(cleanedNumber)}`,
-        {
-          method: "GET",
+      const promise = new Promise(async (resolve, reject) => {
+        try {
+          const response = await fetch(
+            `/api/twilio?phoneNumber=${encodeURIComponent(cleanedNumber)}`,
+            {
+              method: "GET",
+            }
+          );
+          const data = await response.json();
+          resolve(data);
+        } catch (error) {
+          reject(error);
         }
-      );
-      const data = await response.json();
+      });
+
+      toast.promise(promise, {
+        loading: "Sending code to phone.",
+        success: (data) => {
+          return "Please check your phone for a code.";
+        },
+        error: "Something went wrong.",
+      });
+
+      const data = await promise;
       setVisible(true);
     } catch (error) {
       console.log(error);
+      toast.error("Something went wrong.");
     }
   };
 
   return (
     <main className="flex min-h-screen flex-col items-center p-12 lg:p-24">
+      <Toaster position="top-center" />
       <div className={styles.neu}>
         <div className="w-max">
           {!visible ? (
