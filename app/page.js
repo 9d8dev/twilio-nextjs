@@ -13,12 +13,29 @@ export default function Home() {
     setPhoneNumber(formattedPhoneNumber);
   };
 
+  const handlePhoneNumberSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      const cleanedNumber = cleanPhoneNumber(phoneNumber);
+      const response = await fetch(
+        `/api/twilio?phoneNumber=${encodeURIComponent(cleanedNumber)}`,
+        {
+          method: "GET",
+        }
+      );
+      const data = await response.json();
+      setVisible(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center p-12 lg:p-24">
       <div className={styles.neu}>
         <div className="w-max">
           {!visible ? (
-            <form>
+            <form onSubmit={handlePhoneNumberSubmit}>
               <div className="form-control w-full max-w-xs">
                 <label className="label" htmlFor="phoneNumber">
                   <span className="label-text uppercase">Phone Number</span>
@@ -30,35 +47,30 @@ export default function Home() {
                   className="input input-bordered w-full max-w-xs"
                   value={phoneNumber}
                   onChange={handlePhoneNumberChange}
-                  required
+                  required={!visible}
                 />
               </div>
               <button className="btn btn-wide my-4">Submit</button>
             </form>
           ) : (
-            <>
-              <div className="w-full lg:w-1/2">
-                <div className="divider"></div>
+            <form>
+              <div className="form-control w-full max-w-xs">
+                <label className="label" htmlFor="twilioCode">
+                  <span className="label-text uppercase">
+                    Verification Code
+                  </span>
+                </label>
+                <input
+                  name="twilioCode"
+                  type="text"
+                  placeholder="222-222"
+                  className="input input-bordered w-full max-w-xs"
+                  required={visible}
+                  value={twilioCode}
+                />
               </div>
-
-              <form>
-                <div className="form-control w-full max-w-xs">
-                  <label className="label" htmlFor="twilioCode">
-                    <span className="label-text uppercase">
-                      Verification Code
-                    </span>
-                  </label>
-                  <input
-                    name="twilioCode"
-                    type="text"
-                    placeholder="222-222"
-                    className="input input-bordered w-full max-w-xs"
-                    required
-                  />
-                </div>
-                <button className="btn btn-wide my-4">Submit</button>
-              </form>
-            </>
+              <button className="btn btn-wide my-4">Submit</button>
+            </form>
           )}
         </div>
       </div>
@@ -78,4 +90,10 @@ function formatPhoneNumber(value) {
     3,
     6
   )}-${phoneNumber.slice(6, 10)}`;
+}
+
+function cleanPhoneNumber(phoneNumber) {
+  const cleanedNumber = phoneNumber.replace(/\D/g, "");
+  const formattedNumber = "+1" + cleanedNumber;
+  return formattedNumber;
 }
