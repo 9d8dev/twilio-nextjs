@@ -29,6 +29,14 @@ The `twilio-next-template` application consists of the following primary directo
   - `page.js`: Contains the main page components for the application.
 - `public`: Contains static files used across the application, such as SVG files for visual elements【58†source】.
 
+## Example
+
+<img width="678" alt="Screenshot 2023-06-07 at 10 49 24 AM" src="https://github.com/by9d8/twilio-next-template/assets/95453018/3f4f6a57-bbfb-4d2d-ac9a-5605946de9f7">
+
+<img width="561" alt="Screenshot 2023-06-07 at 10 49 40 AM" src="https://github.com/by9d8/twilio-next-template/assets/95453018/a46800f8-457a-4934-91f0-ef8bbfea21a9">
+
+<img width="671" alt="Screenshot 2023-06-07 at 10 49 58 AM" src="https://github.com/by9d8/twilio-next-template/assets/95453018/956b4293-f526-49ca-976a-50366c5bb301">
+
 ## Contributions
 
 This project is open for contributions. We look forward to seeing your ideas and improvements.
