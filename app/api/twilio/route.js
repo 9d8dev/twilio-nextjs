@@ -19,6 +19,7 @@ export async function GET(request) {
 
 export async function POST(request) {
   const { code, phoneNumber } = await request.json();
+  console.log(code, phoneNumber);
   try {
     const verificationResult = await client.verify.v2
       .services(process.env.VERIFICATION_SID)
