@@ -1,8 +1,12 @@
 # README for twilio-next-template
 
+<img width="922" alt="Screenshot 2023-06-07 at 11 17 46 AM" src="https://github.com/by9d8/twilio-next-template/assets/95453018/6285a1b4-6c94-4326-a286-2fe2d48b6685">
+<img width="867" alt="Screenshot 2023-06-07 at 11 17 53 AM" src="https://github.com/by9d8/twilio-next-template/assets/95453018/d405d25c-865f-4b12-ab07-12cc94f0f935">
+<img width="798" alt="Screenshot 2023-06-07 at 11 18 09 AM" src="https://github.com/by9d8/twilio-next-template/assets/95453018/0a88afcc-3fab-4355-b259-6c8bccbd578d">
+
 ## Overview
 
-The `twilio-next-template` is a simple and efficient way to get started with Twilio's two-step text verification using the NextJS App Router and Twilio's API. It is primarily built with JavaScript (96.3%) and CSS (3.7%). This application was created to verify phone numbers for user sign-ups to mitigate spam. It is developed and maintained by 9d8, a development studio by Cameron Youngblood and Bridger Tower【42†source】【46†source】.
+The `twilio-next-template` is a simple and efficient way to get started with Twilio's two-step text verification using the NextJS App Router and Twilio's API. It is primarily built with JavaScript (96.3%) and CSS (3.7%). This application was created to verify phone numbers for user sign-ups to mitigate spam. This project uses [DaisyUI](https://daisyui.com/) and [Toast](https://sonner.emilkowal.ski/) for UI elements. It is developed and maintained by 9d8, a development studio by Cameron Youngblood and Bridger Tower【42†source】【46†source】.
 
 ## Getting Started
 
@@ -28,14 +32,6 @@ The `twilio-next-template` application consists of the following primary directo
   - `layout.js`: Contains the layout components for the application.
   - `page.js`: Contains the main page components for the application.
 - `public`: Contains static files used across the application, such as SVG files for visual elements【58†source】.
-
-## Example
-
-<img width="678" alt="Screenshot 2023-06-07 at 10 49 24 AM" src="https://github.com/by9d8/twilio-next-template/assets/95453018/3f4f6a57-bbfb-4d2d-ac9a-5605946de9f7">
-
-<img width="561" alt="Screenshot 2023-06-07 at 10 49 40 AM" src="https://github.com/by9d8/twilio-next-template/assets/95453018/a46800f8-457a-4934-91f0-ef8bbfea21a9">
-
-<img width="671" alt="Screenshot 2023-06-07 at 10 49 58 AM" src="https://github.com/by9d8/twilio-next-template/assets/95453018/956b4293-f526-49ca-976a-50366c5bb301">
 
 ## Contributions
 
