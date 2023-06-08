@@ -6,7 +6,7 @@
 
 ## Overview
 
-The `twilio-next-template` is a simple and efficient way to get started with Twilio's two-step text verification using the NextJS App Router and Twilio's API. It is primarily built with JavaScript (96.3%) and CSS (3.7%). This application was created to verify phone numbers for user sign-ups to mitigate spam. This project uses [DaisyUI](https://daisyui.com/) and [Toast](https://sonner.emilkowal.ski/) for UI elements. It is developed and maintained by 9d8, a development studio by Cameron Youngblood and Bridger Tower【42†source】【46†source】.
+The `twilio-next-template` is a simple and efficient way to get started with Twilio's two-step text verification using the NextJS App Router and Twilio's API. It is primarily built with JavaScript (96.3%) and CSS (3.7%). This application was created to verify phone numbers for user sign-ups to mitigate spam. This project uses [DaisyUI](https://daisyui.com/) and [Toast](https://sonner.emilkowal.ski/) for UI elements. It is developed and maintained by 9d8, a development studio by Cameron Youngblood and Bridger Tower.
 
 ## Getting Started
 
@@ -20,18 +20,18 @@ To get started with the `twilio-next-template`:
    npm run dev
    ```
 
-Then open `http://localhost:3000` with your browser to see the result【43†source】.
+Then open `http://localhost:3000` with your browser to see the result.
 
 ## Structure
 
 The `twilio-next-template` application consists of the following primary directories:
 
 - `app`: Contains the main application code including:
-  - `api/twilio/route.js`: The API route for managing text code verification【50†source】【54†source】.
+  - `api/twilio/route.js`: The API route for managing text code verification.
   - `globals.css`: Contains the global CSS styles for the application.
   - `layout.js`: Contains the layout components for the application.
   - `page.js`: Contains the main page components for the application.
-- `public`: Contains static files used across the application, such as SVG files for visual elements【58†source】.
+- `public`: Contains static files used across the application, such as SVG files for visual elements.
 
 ## Contributions
 
@@ -43,5 +43,5 @@ This project is licensed under the MIT License. See the LICENSE file in the repo
 
 ## Contact
 
-For more information, check out the creators at [9d8.dev](https://9d8.dev)【44†source】.
+For more information, check out the creators at [9d8.dev](https://9d8.dev).
 Made by 9d8, a development studio by [Cameron Youngblood](https://github.com/youngbloodcyb) and [Bridger Tower](https://github.com/brijr).
