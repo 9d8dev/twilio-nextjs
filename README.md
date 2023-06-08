@@ -6,7 +6,7 @@
 
 ## Overview
 
-The `twilio-next-template` is a simple and efficient way to get started with Twilio's two-step text verification using the NextJS App Router and Twilio's API. It is primarily built with JavaScript (96.3%) and CSS (3.7%). This application was created to verify phone numbers for user sign-ups to mitigate spam. This project uses [DaisyUI](https://daisyui.com/) and [Toast](https://sonner.emilkowal.ski/) for UI elements. It is developed and maintained by 9d8, a development studio by Cameron Youngblood and Bridger Tower.
+The `twilio-next-template` is a simple and efficient way to get started with Twilio's two-step text verification using the NextJS App Router and Twilio's API. It is primarily built with JavaScript (96.3%) and CSS (3.7%). This application was created to verify phone numbers for user sign-ups to mitigate spam. This project uses [DaisyUI](https://daisyui.com/) and [Sonner](https://sonner.emilkowal.ski/) (for toasts) for UI elements. It is developed and maintained by 9d8, a development studio by Cameron Youngblood and Bridger Tower.
 
 ## Getting Started
 
@@ -17,9 +17,12 @@ To get started with the `twilio-next-template`:
 
    ```bash
    npm i
+   ```
+3. Add a `.env` file with your own API keys from Twilio. To find Twilio API keys, navigate to the [Twilio Console](https://twilio.com/console). You’ll be able to find your Account SID and Auth Token on the main dashboard of the console. Copy these values and paste them into your `.env` file as the values for TWILIO_SID and TWILIO_AUTH_TOKEN respectively. You will also need to create a "[verify service](https://www.twilio.com/console/verify/services)" in the Twilio console. Find the service ID of your Twilio service to paste into VERIFICATION_SID. Example names of the ` env` variables are located in the `.env.example` file in the root directory of this repository.
+4. Next, run the following command:
+   ```bash
    npm run dev
    ```
-
 Then open `http://localhost:3000` with your browser to see the result.
 
 ## Structure
@@ -27,7 +30,7 @@ Then open `http://localhost:3000` with your browser to see the result.
 The `twilio-next-template` application consists of the following primary directories:
 
 - `app`: Contains the main application code including:
-  - `api/twilio/route.js`: The API route for managing text code verification.
+  - `api/twilio/route.js`: The API route for managing text code verification. Includes two route handlers for `GET` and `POST` requests.
   - `globals.css`: Contains the global CSS styles for the application.
   - `layout.js`: Contains the layout components for the application.
   - `page.js`: Contains the main page components for the application.
