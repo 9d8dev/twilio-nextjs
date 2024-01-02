@@ -1,4 +1,4 @@
-# README for twilio-next-template
+# Twilio NextJS Template for 2-step Verification
 
 <img width="922" alt="Screenshot 2023-06-07 at 11 17 46 AM" src="https://github.com/by9d8/twilio-next-template/assets/95453018/6285a1b4-6c94-4326-a286-2fe2d48b6685">
 <img width="867" alt="Screenshot 2023-06-07 at 11 17 53 AM" src="https://github.com/by9d8/twilio-next-template/assets/95453018/d405d25c-865f-4b12-ab07-12cc94f0f935">
